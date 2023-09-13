@@ -27,7 +27,7 @@ The timing of the models is benchmarked with [`calc_timing.py`](./calc_timing.py
 
 ---
 
-The training dataset is currently not public. If you're interested in receiveing access, please contact the authors. 
+The training dataset is available under the link: https://syncandshare.desy.de/index.php/s/XfDwx33ryERwPdi
 
 ---
 
