@@ -1,6 +1,6 @@
 # CaloClouds II Model for Fast Calorimeter Simulation
 
-PyTorch implementation of the CaloClouds II Model introduced in *CaloClouds II: Ultra-Fast Geometry-Independent Highly-Granular Calorimeter Simulation* ([arXiv:2309.XXXXX](https://arxiv.org/abs/2305.04847)).
+PyTorch implementation of the CaloClouds II Model introduced in *CaloClouds II: Ultra-Fast Geometry-Independent Highly-Granular Calorimeter Simulation* ([arXiv:2309.05704](https://arxiv.org/abs/2309.05704)).
 
 The model is an evolution of the CaloClouds model published in ([arXiv:2305.04847](https://arxiv.org/abs/2305.04847)).
 
@@ -35,4 +35,4 @@ Code references:
 - The code for training the score-based model is based on: https://github.com/crowsonkb/k-diffusion
 - The consistency distillation is based on: https://github.com/openai/consistency_models/
 - The PointWise Net is adapted from: https://github.com/luost26/diffusion-point-cloud
-- Code base to our CaloClouds (1) model: https://github.com/FLC-QU-hep/CaloClouds
+- Code base for our CaloClouds (1) model: https://github.com/FLC-QU-hep/CaloClouds
