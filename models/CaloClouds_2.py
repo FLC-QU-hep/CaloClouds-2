@@ -3,8 +3,13 @@ from torch.nn import Module, ModuleList
 import torch.nn.functional as F
 
 from .common import ConcatSquashLinear, KLDloss, reparameterize_gaussian
-from .misc import get_flow_model, mean_flat
 from .encoders.epic_encoder_cond import EPiC_encoder_cond
+
+# This import is a bit fragile, it only works if the directory above is on the python path
+# That happens natrually if the directory above is where you started python
+# but we could fix it by either expicitly adding the directory above to the path
+# or by making a deeper directory structure so thi could be a relative import
+from utils.misc import get_flow_model, mean_flat
 
 import k_diffusion as K
 
