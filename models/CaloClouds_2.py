@@ -1,5 +1,6 @@
 import torch
-from torch.nn import Module
+from torch.nn import Module, ModuleList
+import torch.nn.functional as F
 
 from .common import *
 from .encoders.epic_encoder_cond import EPiC_encoder_cond
