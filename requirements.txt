@@ -36,3 +36,4 @@ wurlitzer==3.0.3
 zipp==3.11.0
 pyro-ppl
 nflows
+pandas
