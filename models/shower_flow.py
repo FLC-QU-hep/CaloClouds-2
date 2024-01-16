@@ -4,7 +4,7 @@ import torch.nn as nn
 from pyro.nn import ConditionalDenseNN, DenseNN
 import pyro.distributions as dist
 import pyro.distributions.transforms as T
-from custom_pyro import ConditionalAffineCouplingTanH
+from .custom_pyro import ConditionalAffineCouplingTanH
 
 
 def compile_HybridTanH_model(num_blocks, num_inputs, num_cond_inputs, device):

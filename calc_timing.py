@@ -5,12 +5,11 @@ os.environ['OPENBLAS_NUM_THREADS'] = '1'    # to run numpy single threaded
 import torch
 import time
 
-from models.vae_flow import *
 from configs import Configs
 
 import utils.gen_utils as gen_utils
 
-from models.shower_flow import compile_HybridTanH_model, compile_HybridTanH_model_s
+from models.shower_flow import compile_HybridTanH_model
 import models.CaloClouds_2 as mdls
 import models.CaloClouds_1 as mdls2
 

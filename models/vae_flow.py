@@ -1,13 +1,12 @@
 import torch
 from torch.nn import Module
 
-from .common import *
-from .encoders import *
-from .diffusion import *
-from .flow import *
+from .common import reparameterize_gaussian, gaussian_entropy, standard_normal_logprob, truncated_normal_
+from .encoders.pointnet import PointNetEncoder
+from .diffusion import DiffusionPoint
 
 
-class FlowVAE(Module):
+class VAEFlow(Module):
 
     def __init__(self, args):
         super().__init__()

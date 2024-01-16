@@ -4,14 +4,16 @@ import torch
 from torch.utils.data import DataLoader
 from torch.nn.utils import clip_grad_norm_
 
-from utils.dataset import *
-from utils.misc import *
-from models.vae_flow import *
+from utils.dataset import PointCloudDataset
+from utils.misc import seed_all, get_new_log_dir, CheckpointManager
+from models.common import get_linear_scheduler
 from models.CaloClouds_1 import CaloClouds_1
 from models.CaloClouds_2 import CaloClouds_2
 from configs import Configs
 
 import k_diffusion as K
+
+import time
 
 cfg = Configs()
 seed_all(seed = cfg.seed)

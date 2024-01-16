@@ -34,3 +34,6 @@ Werkzeug==2.2.3
 wrapt==1.14.1
 wurlitzer==3.0.3
 zipp==3.11.0
+pyro-ppl
+nflows
+pandas

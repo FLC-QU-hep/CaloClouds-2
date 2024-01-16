@@ -4,11 +4,13 @@ import torch
 from torch.utils.data import DataLoader
 from torch.nn.utils import clip_grad_norm_
 
-from utils.dataset import *
-from utils.misc import *
-from models.vae_flow import *
+from utils.dataset import PointCloudDataset, PointCloudDatasetGH
+from utils.misc import seed_all, get_new_log_dir, CheckpointManager
+from models.vae_flow import VAEFlow
 from models.CaloClouds_2 import CaloClouds_2
 from configs import Configs
+
+import time
 
 
 def main():
