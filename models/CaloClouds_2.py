@@ -2,9 +2,9 @@ import torch
 from torch.nn import Module, ModuleList
 import torch.nn.functional as F
 
-from .common import *
+from .common import ConcatSquashLinear, KLDloss, reparameterize_gaussian
+from .misc import get_flow_model, mean_flat
 from .encoders.epic_encoder_cond import EPiC_encoder_cond
-from utils.misc import *
 
 import k_diffusion as K
 
@@ -132,7 +132,7 @@ class CaloClouds_2(Module):
 
 
 # from: https://github.com/crowsonkb/k-diffusion/blob/master/k_diffusion/layers.py#L12
-class Denoiser(nn.Module):
+class Denoiser(torch.nn.Module):
     """A Karras et al. preconditioner for denoising diffusion models."""
 
     def __init__(self, inner_model, sigma_data=0.5, device='cuda', distillation = False, sigma_min = 0.002, diffusion_loss='l2'):
@@ -311,12 +311,12 @@ class PointwiseNet_kDiffusion(Module):
             ConcatSquashLinear(128, point_dim, context_dim+time_dim)
         ])
 
-        self.timestep_embed = nn.Sequential(
+        self.timestep_embed = torch.nn.Sequential(
             K.layers.FourierFeatures(1, time_dim, std=fourier_scale),   # 1D Fourier features --> with register_buffer, so weights are not trained
-            nn.Linear(time_dim, time_dim), # this is a trainable layer
+            torch.nn.Linear(time_dim, time_dim), # this is a trainable layer
         )
 
-    def forward(self, x, sigma, context=None):
+    def forward(self, x, sigma, context):
         """
         Args:
             x:  Point clouds at some timestep t, (B, N, d).
