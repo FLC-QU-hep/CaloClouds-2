@@ -1,5 +1,7 @@
 # CaloClouds II Model for Fast Calorimeter Simulation
 
+[![arXiv](https://img.shields.io/badge/arXiv-2309.05704-<COLOR>.svg)](https://arxiv.org/abs/2309.05704)
+
 PyTorch implementation of the CaloClouds II Model introduced in *CaloClouds II: Ultra-Fast Geometry-Independent Highly-Granular Calorimeter Simulation* ([arXiv:2309.05704](https://arxiv.org/abs/2309.05704)).
 
 The model is an evolution of the CaloClouds model published in ([arXiv:2305.04847](https://arxiv.org/abs/2305.04847)).

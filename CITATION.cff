@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "The following software is a product of a published paper, if you use the software, please cite out paper as below."
+authors:
+    - family-names: Buhmann
+      given-names: Erik
+      orcid: https://orcid.org/0000-0002-4805-3721
+    - family-names: Gaede
+      given-names: Frank
+      orcid: https://orcid.org/0000-0002-7055-9200
+    - family-names: Kasieczka
+      given-names: Gregor
+      orcid: https://orcid.org/0000-0003-3457-2755
+    - family-names: Korol
+      given-names: Anatolii
+      orcid: https://orcid.org/0000-0002-2569-1771
+    - family-names: Korcari
+      given-names: William
+      orcid: https://orcid.org/0000-0001-8017-5502
+    - family-names: Krüger
+      given-names: Katja
+      orcid: https://orcid.org/0000-0002-1956-6608
+    - family-names: McKeown
+      given-names: Peter
+      orcid: https://orcid.org/0009-0006-9722-2233
+title: "CaloClouds II: Ultra-Fast Geometry-Independent Highly-Granular Calorimeter Simulation"
+version: 1.0
+identifiers:
+    - type: doi
+    - value: 10.48550/arXiv.2309.05704
+date-released: 2023-12-12
+      
